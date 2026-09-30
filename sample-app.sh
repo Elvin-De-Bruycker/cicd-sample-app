@@ -1,5 +1,8 @@
 #!/bin/bash
 set -euo pipefail
+docker stop samplerunning 2>/dev/null || true
+docker rm samplerunning 2>/dev/null || true
+rm -rf tempdir
 
 mkdir tempdir
 mkdir tempdir/templates
