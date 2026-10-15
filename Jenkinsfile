@@ -1,3 +1,6 @@
+    properties([
+        pipelineTriggers([pollSCM('H/2 * * * *')])
+    ])
     node {
         stage('Preparation') {
             catchError(buildResult: 'SUCCESS') {
